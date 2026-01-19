@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Malware & URL Analysis System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Malware & URL Analysis System</h1>
+    <p class="subtitle">Upload a file or submit a suspicious URL for analysis</p>
+
+    <div class="card">
+        <label>Upload Executable File (.exe)</label>
+        <input type="file" id="fileInput" accept=".exe">
+        <p id="fileInfo"></p>
+    </div>
+
+    <div class="card">
+        <label>Suspicious URL</label>
+        <input type="text" id="urlInput" placeholder="https://example.com">
+    </div>
+
+    <button onclick="startAnalysis()">Start Analysis</button>
+
+    <div id="statusBox" class="card hidden"></div>
+
+    <div class="card chat-box">
+        <h3>Analysis Assistant</h3>
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about the file or URL...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
